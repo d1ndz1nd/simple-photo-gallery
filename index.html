@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фотогалерея</title>
+    <style>
+        .modal_container {
+            display: none;
+            padding: 30px;
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: #0000007e;
+        }
+
+        .modal {
+            padding: 30px;
+            width: 500px;
+            background: #fff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 5px;
+        }
+
+        .modal img {
+            width: 400px;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+            margin: auto;
+        }
+
+        .pages {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            gap: 20px;
+            border-radius: 5px;
+            border: 1px solid #0000007e;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            flex-wrap: wrap;
+        }
+
+        .wrapper {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            padding-bottom: 5px;
+            padding-top: 5px;
+            border: 1px solid #0000007e;
+            border-radius: 5px;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        input {
+            border-radius: 5px;
+        }
+
+        button,
+        img {
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .container {
+            padding-top: 10px;
+        }
+
+        .close:hover {
+            color: red;
+            cursor: pointer;
+        }
+
+        .close::selection {
+            color: none;
+        }
+
+        .menu:hover {
+            cursor: pointer;
+            color: darkcyan;
+        }
+    </style>
+    <script src="13.js" defer></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <label for="input">Введіть пошуковий запит →</label>
+        <input type="text" id="input" placeholder="Пошук картинок">
+        <button id="btn">Пошук</button>
+    </div>
+    <div class="pages">ㅤ</div>
+    <div class="container"></div>
+
+    <div class="modal_container">
+        <div class="modal">
+            <span class="close">X</span>
+            <div class="img"></div>
+        </div>
+    </div>
+</body>
+
+</html>
